@@ -1,0 +1,30 @@
+import java.io.*;
+import java.lang.*;
+import java.nio.*;
+import java.nio.charset.Charset;
+import java.util.*;
+
+class Main {
+public static void main(String[] args)
+{
+
+try {
+
+String s = " NIMS Institute of Engineering & Technology";
+
+String charsetName = "UTF-16";
+
+byte[] byteArray = s.getBytes("UTF-16");
+
+System.out.println(Arrays.toString(byteArray));
+
+System.out.println("Length of String"
++ " " + s.length() + " "
++ "Length of byte Array"
++ " " + byteArray.length);
+}
+catch (UnsupportedEncodingException e) {
+System.out.println("Unsupported charset :" + e);
+}
+}
+}
